@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 15 nov 2015 om 15:15
+-- Gegenereerd op: 15 nov 2015 om 15:22
 -- Serverversie: 5.6.16
 -- PHP-versie: 5.5.11
 
@@ -51,6 +51,21 @@ CREATE TABLE IF NOT EXISTS `media` (
   `tstamp` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for projectmedia';
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `people`
+--
+
+CREATE TABLE IF NOT EXISTS `people` (
+  `id` int(11) NOT NULL,
+  `title` varchar(45) DEFAULT NULL,
+  `description` varchar(45) DEFAULT NULL,
+  `tstamp` datetime DEFAULT NULL,
+  `crdate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='table for some info about people';
 
 -- --------------------------------------------------------
 
