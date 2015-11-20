@@ -1,0 +1,15 @@
+
+.grid-item 
+{ 
+	width: 59px;
+    height: 59px;
+    float: left;
+    /* where the magic happens */
+    margin: -1px -1px 0 0;
+    background: #CCC;
+    border: 1px solid;
+}
+.grid-item--width2 
+{ 
+	width: 400px; 
+}

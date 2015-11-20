@@ -13,24 +13,42 @@ Max van Duijn
 VER: 0.01
 
 */
-	
-echo "Hi, this is not working quite yet."
 
-$instance = new ArchiveMT();
+class ArchiveMT
+{		
+	public $link = null;
 
-public class ArchiveMT
-{
-	__construct($args = "")
-	{
-		//do something here...
+	function __construct($args = "")
+	{			
+		$this->link = mysql_connect('localhost', 'root', 'admin');
+		
+		//do something here...		
+		$this->getProjects($_GET['query'], $_GET['sorting']);
 	}
 	
 	/**
 	*	Get projects from database based on user constraints
 	*/
-	function getProjects($basedon)
-	{
-		return null;
+	function getProjects($query, $sorting)
+	{					
+		mysql_select_db('mtarchive', $this->link);
+		
+		$res = mysql_query("select * from mtarchive.projects order by tstamp asc");
+		
+		if(!$res)
+		{
+			echo "no rows";
+		}
+		else
+		{
+			$list = array();
+			
+			while ($row = mysql_fetch_array($res)) {
+				$list[] = $row;
+			}
+						
+			echo json_encode($list);
+		}
 	}
 	
 	/**
@@ -49,5 +67,7 @@ public class ArchiveMT
 		return null;
 	}
 }
+
+$instance = new ArchiveMT();
 
 ?>
