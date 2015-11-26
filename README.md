@@ -28,6 +28,7 @@ projects is de hoofdtabel.
 	- kan dit in standaard php? gewoon met requires? 
 	- by extension alle html uit javascript halen
 - op zoek naar een gratis masonry met zoek functionaliteit, lijkt dat Masonry.js dat wel kan, maar zie nog niet echt waar. Izotope kost geld. 
+- harde paden
 
 
 
