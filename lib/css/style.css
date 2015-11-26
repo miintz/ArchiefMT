@@ -1,8 +1,8 @@
 
 .grid-item 
 { 
-	width: 59px;
-    height: 59px;
+	width: 100px;
+    height: 60px;
     float: left;
     /* where the magic happens */
     margin: -1px -1px 0 0;

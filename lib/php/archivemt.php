@@ -17,13 +17,19 @@ VER: 0.01
 class ArchiveMT
 {		
 	public $link = null;
+	private $mu = "root";
+	private $mp = "";
 
 	function __construct($args = "")
 	{			
-		$this->link = mysql_connect('localhost', 'root', 'admin');
+		$this->link = mysql_connect('localhost', $this->mu, $this->mp);
 		
 		//do something here...		
-		$this->getProjects($_GET['query'], $_GET['sorting']);
+		if(isset($_GET['query']))
+			$this->getProjects($_GET['query'], $_GET['sorting']);		
+		else		
+			require("C:/xampp/htdocs/ArchiefMT/lib/html/error.html"); //hard pad fixen
+		
 	}
 	
 	/**
@@ -45,8 +51,8 @@ class ArchiveMT
 			
 			while ($row = mysql_fetch_array($res)) {
 				$list[] = $row;
-			}
-						
+			}					
+			
 			echo json_encode($list);
 		}
 	}
@@ -66,6 +72,8 @@ class ArchiveMT
 	{
 		return null;
 	}
+
+	//moet nog een soort get assoc in
 }
 
 $instance = new ArchiveMT();
