@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title> Media Technology Archive </title>
+	<title> based on filterable Portfolio with Bootstrap and Shuffle.js</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/custom.css" rel="stylesheet">
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <h1 class="text-center">Archive based on filterable portfolio with Bootstrap 3 and Shuffle.js</h1>
+<!--popup example -->
+    <div id="popup_this" class="text-center">
+
+  </div>
+
+    <section class="portfolio">
+      <div class="container">
+        <div class="row">
+
+          <ul class="portfolio-sorting list-inline text-center">
+            <li><a href="#" data-group="all" class="active">All</a></li>
+            <li><a href="#" data-group="people">People</a></li>
+            <li><a href="#" data-group="courses">Courses</a></li>
+            <li><a href="#" data-group="events">Events</a></li>
+          </ul> <!--end portfolio sorting -->
+
+          <ul class="portfolio-items list-unstyled" id="grid">
+
+            <li class="col-md-4 col-sm-4 col-xs-6 contentBlock" data-groups='["people"]'>
+              <figure class="portfolio-item">
+                <a href="#">
+                  <img src="media/MTArchive_2014_001_thumb.png" alt="Item 1" class="img-responsive">
+                </a>
+              </figure>
+            </li>
+
+            <li class="col-md-4 col-sm-4 col-xs-6 contentBlock" data-groups='["people"]'>
+                <figure class="portfolio-item">
+                    <a href="#">
+                        <img src="media/MTArchive_2014_001_pict.png" alt="" class="img-responsive">
+                    </a>
+                </figure>
+            </li>
+
+           <li class="col-md-4 col-sm-4 col-xs-6 contentBlock" data-groups='["courses"]'>
+              <figure class="portfolio-item">
+                  <a href="#">
+                      <img src="media/vogel.jpg" alt="" class="img-responsive">
+                  </a>
+              </figure>
+            </li>
+
+            <li class="col-md-4 col-sm-4 col-xs-6 contentBlock" data-groups='["courses"]'>
+              <figure class="portfolio-item">
+                  <a href="#">
+                      <img src="media/bpmpotsketch.jpg" alt="" class="img-responsive">
+                  </a>
+              </figure>
+            </li>
+
+            <li class="col-md-4 col-sm-4 col-xs-6 contentBlock" data-groups='["courses", "events"]'>
+              <figure class="portfolio-item">
+                  <a href="#">
+                      <img src="media/SweetSpotsEmergingTraces.png" alt="" class="img-responsive">
+                  </a>
+              </figure>
+            </li>
+
+            <li class="col-md-4 col-sm-4 col-xs-6 contentBlock" data-groups='["courses"]'>
+              <figure class="portfolio-item">
+                  <a href="#">
+                      <video width="col-md-4" height ="col-sm-4" controls autoplay loop>
+                      <source src="media/Sweet_Spots.mp4" type="video/mp4" />
+              If you can see this, you need to update your browser
+            </video>
+                  </a>
+              </figure>
+            </li>
+
+            <li class="col-md-4 col-sm-4 col-xs-6 contentBlock" data-groups='["courses", "events"]'>
+              <figure class="portfolio-item">
+                  <a href="#">
+                      <video width="col-md-4" height ="col-sm-4" controls autoplay loop>
+                      <source src="media/MTArchive_2014_001_media1.mp4" type="video/mp4" />
+              If you can see this, you need to update your browser
+            </video>
+                  </a>
+              </figure>
+            </li>
+
+          <!-- sizer -->
+            <li class="col-md-4 col-sm-4 col-xs-6 shuffle_sizer"></li>
+
+
+          </ul> <!--end portfolio grid -->
+
+
+          </div> <!--end row -->
+        </div> <!-- end container-->
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4 column">
+            <h4>AcasA Programming</h4>
+            <p>A tutorial by <a href="http://acasaprogramming.ro">AcasA Programming</a></p>
+            <ul class="social-icons list-inline">
+              <li><a href="https://www.youtube.com/channel/UCBGItdbB-5Yma5X6FK_hYBA" class="youtube"><span class="fa fa-youtube"></span></a></li>
+              <li><a href="https://www.facebook.com/acasaprogramming" class="facebook"><span class="fa fa fa-facebook"></span></a></li>
+              <li><a href="https://github.com/acasaprogramming" class="github"><span class="fa fa-github"></span></a></li>
+            </ul>
+
+          </div>
+
+
+          <div class="col-md-4 column">
+            <h4>Credits</h4>
+            <ul class="list-unstyled">
+              <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="https://getbootstrap.com/">Bootstrap 3</a></li>
+              <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="https://vestride.github.io/Shuffle/">Shuffle.js</a></li>
+              <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="http://benalman.com/projects/jquery-throttle-debounce-plugin/" target="_blank">jQuery throttle / debounce</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 column">
+            <h4>Images by:</h4>
+            <ul class="list-unstyled">
+              <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="http://lorempixel.com/">Lorempixel</a></li>
+              <li><span class=" glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="http://lorempicsum.com/">Lorempicsum</a></li>
+            </ul>
+          </div>
+
+        </div> <!--end row -->
+      </div> <!-- end container-->
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="bpopup/jquery.bpopup.min.js"></script>
+
+
+    <script>
+
+    // getting html template for popup_this
+
+    $( ".contentBlock" ).click(function() {
+      $.ajax({
+            url: "template.html",
+            success: function(data) {
+              $("#popup_this").html(data);
+              $("#popup_this" ).bPopup();
+            },
+            dataType: 'html'});
+    });
+    </script>
+
+  </body>
+</html>
